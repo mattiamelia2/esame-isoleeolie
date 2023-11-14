@@ -1,0 +1,197 @@
+body {
+    margin: 0px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    overflow: s;
+}
+
+h1{
+    color: #032F3D;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+h2 {
+    color: #032F3D;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+h4 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+p {
+    color: #032F3D;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* ---- BUTTON BIANCO ---- */
+.buttonbianco {
+    border-radius: 35.5px;
+    background: #FFF;
+    color: #238FB0;
+    text-align: center;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 230px;
+    height: 55px;
+    flex-shrink: 0;
+    border: none;
+    transition-duration: 0.7s;
+    border: none;
+}
+
+.buttonbianco:hover {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    transition-duration: 0.7s;
+}
+
+/* BUTTON PAGINE COLORE */
+.buttonpagine {
+    width: 230px;
+    height: 47px;
+    flex-shrink: 0;
+    color: #238EB0;
+    text-align: center;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 35.5px;
+    border: 2px solid #238EB0;
+    background-color: transparent;
+    transition-duration: 0.7s;
+}
+
+.buttonpagine:hover {
+    width: 230px;
+    height: 47px;
+    flex-shrink: 0;
+    color: #ffffff;
+    text-align: center;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 35.5px;
+    border: 2px solid #238EB0;
+    background-color: #238EB0;
+    transition-duration: 0.7s;
+}
+
+/* ------ BUTTON SLIDER COLORATO ------ */
+.buttonslidercolor{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    height: 36px;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 500px;
+    text-align: center;
+    align-items: center;
+}
+
+.sinistracolor {
+    margin-right: 5px;
+    margin-left: 15px;
+}
+
+.destracolor {
+    margin-left: 5px;
+}
+
+.controllerslidercolor {
+    display: flex;
+    align-items: center;
+}
+
+/* ------ BUTTON SLIDER BIANCO ------ */
+.buttonslider{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    height: 36px;
+    background-color: transparent;
+    border: 2px solid #238FB0;
+    border-radius: 500px;
+    text-align: center;
+    align-items: center;
+}
+
+.sinistra {
+    margin-right: 5px;
+    margin-left: 15px;
+}
+
+.destra {
+    margin-left: 5px;
+}
+
+.controllerslider {
+    display: flex;
+    align-items: center;
+}
+
+/* STYLE LINK SFUSI */
+.linksfusi a {
+    font-weight: 700;
+    color: #238FB0;
+    text-decoration: underline;
+    padding-top: 15px;
+}
+
+.linksfusi{
+    font-weight: 700;
+    color: #238FB0;
+    text-decoration: underline;
+    padding-top: 15px;
+}
+
+.linksfusi a:hover {
+    font-weight: 700;
+    color: #238FB0;
+    text-decoration: underline;
+}
+
+.linksfusobianco {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.logocoloratoscritta {
+    margin: 0px;
+    padding-bottom: 10px;
+    padding-top: 15px;
+}
+
+.h2contenuto5 {
+    margin: 0px;
+}
+
+.slider-container3 img {
+    border-bottom: 10px solid #238FB0;
+    border-width: 100%;
+    border-radius: 33px;
+    padding-top: -10px;
+}

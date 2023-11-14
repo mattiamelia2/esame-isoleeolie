@@ -1,0 +1,332 @@
+/* ----- SLIDER header ----- */
+/* Aggiungi questo codice al tuo foglio di stile CSS */
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 650px;
+    background: linear-gradient(to bottom, rgba(4, 90, 117, 0.5), rgba(35, 143, 176, 0.0));
+}
+
+.copyrightfoto {
+    position: absolute;
+    transform: rotate(-90deg) translate(-50%, -50%);
+    color: #FFF;
+    font-size: 8px;
+    font-weight: 300;
+    line-height: normal;
+    top: 40%;
+    right: -90px;
+    z-index: 99;
+}
+
+
+.immaginesfondo {
+    position:static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.immaginesfondo img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.dividerhome1 {
+    height: 196px;
+    z-index: 100;
+    position: static;
+    margin-top: -100px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.diverhome2 {
+    height: 196px;
+    z-index: 101;
+    position: static;
+    margin-top: -180px;
+    max-width: 100%;
+    overflow: hidden;
+
+}
+
+.slidertesto {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    text-align: center;
+    max-width: 400px;
+    color: #ffffff;
+
+}
+
+/* ---- STYLE ISOLE SLIDER */
+.contenuto1 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 20px;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 10%;
+    overflow: hidden;
+}
+
+.boxtesto {
+    max-width: 100%;
+    width: 550px;
+    grid-area: 1 / 2 / 2 / 6;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    grid-area: 1 / 7 / 2 / 13;
+}
+
+.slide {
+    flex: 0 0 auto;
+    margin: 0;
+    padding: 0;
+}
+
+.slide img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.slide img:hover {
+    transform: translateY(-10px);
+}
+
+/* style SVG divisore */
+.divisoreimmagine2 {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+}
+
+.divisoreimmagine2 img {
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.testoslider {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFF;
+    text-align: center;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 600px;
+    margin: 0px;
+}
+
+/* STYLE AEREO E TESTO */
+.contenuto3 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 30px;
+    align-items: center;
+    padding-top: 150px;
+    padding-bottom: 10%;
+    overflow: hidden;
+}
+
+.boxtesto2 {
+    max-width: 500px;
+    grid-area: 1 / 7 / 2 / 12;
+    padding-left: 70px;
+}
+
+.slider-container2 {
+    display: flex;
+    grid-area: 1 / 1 / 2 / 6; 
+}
+
+.slider-container2 img {
+    width: 110%;
+    height:auto;
+    flex-shrink: 0;
+    float: left;
+}
+
+/* ---- STYLE HOTEL SLIDER */
+.contenuto4 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 20px;
+    align-items: center;
+    padding-top: 7%;
+    padding-bottom: 6%;
+    overflow: hidden;
+    background-color: #238FB0;
+}
+
+.boxtesto4 {
+    max-width: 100%;
+    width: 550px;
+    grid-area: 1 / 2 / 2 / 6;
+}
+
+.slider-container4 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    grid-area: 1 / 7 / 2 / 13;
+}
+
+.slide4 {
+    flex: 0 0 auto;
+    margin: 0;
+    padding: 0;
+}
+
+.slide4 img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.slide4 img:hover {
+    transform: translateY(-10px);
+}
+
+.parslidehotel {
+    color: #ffffff;
+}
+
+.h2slidehotel {
+    color: #ffffff;
+    margin: 0px;
+}
+
+.slider-container3 {
+    display: flex;
+    align-items: center;
+    grid-area: 1 / 2 / 2 / 6;
+    float: center;
+}
+
+.boxtesto5 {
+    max-width: 500px;
+    grid-area: 1 / 7 / 2 / 12;
+    padding-left: 150px;
+} 
+
+
+
+/* RESPONSIVE MOBILE */
+@media only screen and (max-width: 768px) {
+    .div1 a img {
+        width: 160px;
+    }
+    .immaginesfondo {
+        position: relative;
+        width: 100%;
+        height: 800px;
+        overflow: hidden;
+        z-index: -50;
+    }
+    
+    .immaginesfondo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        z-index: -50;
+    }
+    .contenuto1 {
+        display: block;
+        padding-left: 30px;
+        padding-bottom: 100px;
+        padding-top: 0px;
+        margin-top: -130px;
+    }
+    .boxtesto {
+        width: 430px;
+        padding-bottom: 50px;
+    }
+    .dividerhome1, .divisoreimmagine2 {
+        padding-bottom: 0px;
+    }
+    .divisoreimmagine2 {
+        position: relative;
+        width: 100%;
+        height: 250px;
+        overflow: hidden;
+        z-index: -50;
+        padding-top: 30px;
+    }
+    
+    .divisoreimmagine2 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        z-index: -50;
+    }
+    .testoslider {
+        width: 400px;
+        font-size: 25px;
+    }
+    .contenuto3 {
+        display: block;
+        padding-bottom: 100px;
+        padding-top: 50px;
+    }
+    .boxtesto2 {
+        width: 440px;
+        clear: both;
+        margin-left: -40px;
+        padding-left: 0px;
+    }
+    .slider-container2 {
+        object-position:left;
+        width: 80%; 
+        padding-top: 80px;
+    }
+    .contenuto4 {
+        display: block;
+        padding-bottom: 100px;
+        padding-top: 50px;
+        padding-left: 30px;
+    }
+    .boxtesto4 {
+        padding-bottom: 65px;
+        width: 430px;
+    }
+    .contenuto3 {
+        display: block;
+        padding-bottom: 100px;
+        padding-top: 50px;
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+    .boxtesto5 {
+        margin-left: 0px;
+        padding-left: 30px;
+        width: 430px;
+        padding-top: 50px;
+        padding-bottom: 70px;
+    }
+    .slider-container3 img{
+        max-width: 90%; 
+        margin: 0 auto;
+        border-radius: 0px;
+    }
+}
+

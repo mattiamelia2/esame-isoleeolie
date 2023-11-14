@@ -1,0 +1,193 @@
+header {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: #ffffff;
+    list-style: none;
+    position: absolute;
+    z-index: 99;
+    background-color: transparent;
+    text-align: center;
+}
+
+/* Stile di base per l'header e il menu */
+.parent {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 30px;
+    background-color: transparent;
+    list-style: none;
+    text-align: center;
+    align-items: center;
+    z-index: 99;
+    padding-top: 30px;
+    width: 100%;
+}
+
+.parent ul {
+    list-style: none;
+    text-align: center;
+    padding: 0px;
+}
+
+.parent ul li {
+    padding-bottom: 5px;
+}
+.div1 {
+    grid-area: 1 / 2 / 2 / 4;
+}
+
+.div2 {
+    grid-area: 1 / 8 / 2 / 9;
+}
+
+.div3 {
+    grid-area: 1 / 9 / 2 / 10;
+}
+
+.div4 {
+    grid-area: 1 / 10 / 2 / 11;
+}
+
+.div5 {
+    grid-area: 1 / 11 / 2 / 12;
+}
+
+.div2, .div3, .div4, .div5 {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+/* Stile per il menu a tendina */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.div2:hover .dropdown, .div3:hover .dropdown, .div4:hover .dropdown, .div5:hover .dropdown {
+    display: block;
+}
+
+.div2::after, .div3::after, .div5::after {
+    content: url('/logo/freccia.png');
+    position: relative;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    width: 10px;
+}
+
+.dropdown ul li, .dropdown ul li a {
+    list-style: none;
+    color: #238FB0;
+    text-decoration: none;
+    line-height: 30px;
+}
+
+.dropdown ul li:hover, .dropdown ul li a:hover {
+    text-decoration: underline;
+}
+
+.dropdown1 {
+    width: 123px;
+    text-align: center;
+    align-items: center;
+    min-width: 135px;
+}
+
+.dropdown2 {
+    width: 230px;
+    text-align: center;
+    align-items: center;
+}
+
+.dropdown3 {
+    width: 177px;
+    text-align: center;
+    align-items: center;
+}
+
+.voceheaderlink{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* RESPONSIVE MOBILE MENU */
+/* Aggiungi questi stili alla fine del tuo CSS */
+
+/* Stile per il menu mobile */
+.mobile-menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 5px 0;
+}
+
+/* Stili per il menu a tendina mobile */
+@media only screen and (max-width: 768px) {
+    .parent {
+        display: block;
+        align-content: center;
+        align-items: center!important;
+    }
+    .div1 {
+        text-align: left;
+        margin-left: 30px;
+    }
+
+    .div2,
+    .div3,
+    .div4,
+    .div5 {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        z-index: 9999;
+    }
+
+    .dropdown {
+        position: relative;
+        display: block;
+        width: 100%;
+    }
+
+    .dropdown ul {
+        padding: 0;
+    }
+
+    .dropdown ul li {
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .dropdown1,
+    .dropdown2,
+    .dropdown3 {
+        width: 100%;
+    }
+
+    .div2::after,
+    .div3::after,
+    .div5::after {
+        content: none;
+    }
+}
+
+/* Aggiungi altri stili di responsività secondo necessità */
