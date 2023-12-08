@@ -75,7 +75,7 @@ header {
 }
 
 .div2::after, .div3::after, .div5::after {
-    content: url('logo/freccia.png');
+    content: url('/esame-isoleeolie/logo/freccia.png');
     position: relative;
     height: auto;
     margin: 0px;
@@ -297,7 +297,7 @@ header {
 }
 
 .vocemenusingola::after{
-    content: url('logo/freccia.png');
+    content: url('/esame-isoleeolie/logo/freccia.png');
     height: auto;
     margin: 0px;
     padding-left: 10px;
