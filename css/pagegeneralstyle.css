@@ -21,6 +21,27 @@
     display: flex;
     justify-content: center;
 }
+@media only screen and (min-width: 768px) {
+    .meteovariabile2 {
+        display: none;
+    }
+}
+@media only screen and (max-width: 768px) {
+.meteovariabile2 {
+    padding-top: 0;
+    margin-top: -100px;
+    margin-bottom: 100px;
+    padding-top: 6%;
+    padding-bottom: 6%;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+}
+.meteovariabile {
+    display: none;
+}
+}
 
 /* STYLE GRID CARD */
 .centropagina {
@@ -307,6 +328,43 @@
         align-items: center;
         padding-top: 0
         }
+    .sezionesoggiorno2{
+        padding-bottom: 150px;
+    }
+        .sezioneristorante2 {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-column-gap: 150px;
+            grid-row-gap: 50px;
+            padding-bottom: 2%;
+            align-items: center;
+            padding-top: 0
+            }
+
+    .sezionecomearrivare {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 0px;
+    padding-bottom: 150px;
+    align-items: center;
+    align-content: center;
+    }
+
+    .comearrivare1 {
+        grid-area: 1 / 1 / 2 / 6;
+    }
+    .comearrivare2 {
+        grid-area: 1 / 7 / 2 / 12;
+    }
+    .comearrivare3 {
+        grid-area: 1 / 8 / 2 / 12;
+    }
+    .comearrivare4 {
+        grid-area: 1 / 2 / 2 / 6; 
+    }
         
         .risto1 {
             grid-area: 1 / 2 / 2 / 4;
@@ -353,6 +411,19 @@
             padding-left: 50px;
         }
 
+.paragrafoarrivare{
+    color: #000;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+.linkparagrafoarrivare {
+    color: #000;
+    font-size: 15px;
+    font-style: normal;
+    line-height: normal;
+}
 .spaziocard {
     padding-top: 40px;
 }
@@ -667,6 +738,36 @@
         justify-content: center;
         margin-top: -70px;
     }
+    .sezioneristorante2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: -50px;
+    }
+    .sezionecomearrivare{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .comearrivare1 img{
+        width: 500px;
+        padding-right: 50px;
+    }
+    .comearrivare3 img{
+        width: 500px;
+        padding-left: 50px;
+    }
+    .comearrivare4 img{
+        width: 320px;
+    }
+    .comearrivare4{
+       padding-left: 0px;
+       margin-left: 0px;
+    }
     .risto1 img{
         width: 370px;
     }
@@ -694,5 +795,14 @@
     .risto8{
         padding-bottom: 70px;
         margin-left: -80px;
+    }
+    .cardcontatti {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .contatti1, .contatti2, .contatti3 {
+        background-color: transparent;
     }
 }

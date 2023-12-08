@@ -118,76 +118,254 @@ header {
     color: #ffffff;
 }
 
-/* RESPONSIVE MOBILE MENU */
-/* Aggiungi questi stili alla fine del tuo CSS */
 
-/* Stile per il menu mobile */
-.mobile-menu-icon {
+/* RESPONSIVE MENU MOBILE DEFINITIVO */
+.menu-mobile {
+    display: none; /* Mantiene il menu nascosto di default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #238fb0bd;
+    backdrop-filter: blur(10px);
+    z-index: 999; 
+    text-align: center;
+    overflow-y: auto;
+}
+
+
+.menu-mobile ul {
+    position: absolute;
+    top: 50%; /* Posiziona al centro verticalmente */
+    left: 50%; /* Posiziona al centro orizzontalmente */
+    transform: translate(-50%, -50%); /* Centra esattamente al centro dello schermo */
+    width: 100%; /* Assicura che l'elenco occupi l'intera larghezza */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-mobile ul li {
+    padding: 10px 0;
+    font-size: 20px;
+    display: block;
+}
+
+.menu-mobile ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-mobile {
+        display: block;
+    }
+        .div1, .div2, .div3, .div4, .div5 {
+            display: none;
+        }
+        .logomobile img {
+            width: 170px;
+            padding-left: 30px;
+            align-items: center;
+            z-index: 1000;
+        }
+        .headermobile1 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            align-content: center;
+            padding-top: 10px;
+        }
+        .hamburger-menu {
+            padding-left: 130px;
+            align-items: center;
+        }
+}
+
+
+/* Stili per il menu a hamburger */
+.hamburger-menu {
     display: none;
     cursor: pointer;
+    z-index: 1001; /* Assicurati che sia sopra al menu mobile */
 }
 
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: #ffffff;
+.hamburger-menu .linea {
+    width: 30px;
+    height: 4px;
+    background-color: rgb(255, 255, 255);
     margin: 5px 0;
+    transition: 0.4s;
 }
 
-/* Stili per il menu a tendina mobile */
-@media only screen and (max-width: 768px) {
-    .parent {
+/* Stili per il cambio dell'icona hamburger in una "X" */
+.hamburger-menu.attivo .linea:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-menu.attivo .linea:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.attivo .linea:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Media query per dispositivi con larghezza inferiore a 768px */
+@media screen and (max-width: 768px) {
+    .hamburger-menu {
         display: block;
-        align-content: center;
-        align-items: center!important;
-    }
-    .div1 {
-        text-align: left;
-        margin-left: 30px;
     }
 
-    .div2,
-    .div3,
-    .div4,
-    .div5 {
+    /* Nascondi gli elementi del menu desktop */
+    .div1, .div2, .div3, .div4, .div5 {
         display: none;
     }
-
-    .mobile-menu-icon {
-        display: block;
-        position: absolute;
-        top: 25px;
-        right: 25px;
-        z-index: 9999;
-    }
-
-    .dropdown {
+    .logomobile img {
+        width: 200px;
+        padding-left: 30px;
+        align-items: center;
+        z-index: 999999;
         position: relative;
-        display: block;
-        width: 100%;
     }
-
-    .dropdown ul {
-        padding: 0;
+    .headermobile1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        padding-top: 10px;
     }
-
-    .dropdown ul li {
-        display: block;
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    .dropdown1,
-    .dropdown2,
-    .dropdown3 {
-        width: 100%;
-    }
-
-    .div2::after,
-    .div3::after,
-    .div5::after {
-        content: none;
+    .hamburger-menu {
+        padding-left: 210px;
+        align-items: center;
     }
 }
 
-/* Aggiungi altri stili di responsività secondo necessità */
+.menu-mobile ul li ul {
+    display: none;
+    padding-left: 20px;
+}
+
+/* Stile per sottomenu aperti */
+.menu-mobile ul li.active > ul {
+    display: block;
+}
+
+@media screen and (min-width: 768px) {
+.headermobile1 {
+    display: none;
+}
+}
+
+/* Stile per la freccia di ritorno */
+.menu-mobile .back-button {
+    display: none;
+    padding: 15px 0;
+    font-size: 20px;
+    text-align: left;
+}
+
+.menu-mobile ul li.active > a {
+    display: none; /* Nasconde la voce principale quando il sottomenu è attivo */
+    background-color: #238FB0;
+}
+
+.menu-mobile ul li.hidden {
+    display: none;
+}
+
+.menu-mobile ul li ul{
+    display: none;
+    margin-top: 40px;
+}
+
+.menu-mobile ul li ul li.back-button {
+    display: inline-block;
+    background-color: #ffffff2b;
+    max-width: 180px;
+    padding: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 20px;
+}
+
+.menu-mobile li:hover {
+    text-decoration: underline;
+}
+
+.vocemenusingola::after{
+    content: url('/logo/freccia.png');
+    height: auto;
+    margin: 0px;
+    padding-left: 10px;
+    }
+
+.vocemenusingola {
+    display: inline-flex;
+    max-width: 100%;
+}
+
+/* Animazione di fade-in per il menu mobile */
+.menu-mobile {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.menu-mobile.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Animazione di fade-in per i sottomenu */
+.menu-mobile ul li ul {
+    display: block; /* Cambia a block */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.menu-mobile ul li ul.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hamburger-menu {
+    /* Posizionamento e dimensioni del menu a hamburger */
+    position: relative; /* o un'altra posizione, a seconda del layout */
+    width: 40px; /* esempio di dimensione */
+    height: 30px; /* esempio di dimensione */
+    /* Altri stili... */
+}
+
+.hamburger-bar {
+    /* Stili per ogni barretta */
+    position: absolute;
+    width: 100%; /* lunghezza della barretta */
+    height: 5px; /* altezza della barretta */
+    background-color: #000; /* colore della barretta */
+    transition: transform 0.3s ease-in-out;
+    /* Posiziona ogni barretta... */
+}
+
+/* Posiziona specificatamente ogni barretta */
+.hamburger-bar:nth-child(1) { top: 0; }
+.hamburger-bar:nth-child(2) { top: 50%; }
+.hamburger-bar:nth-child(3) { top: 100%; }
+
+.hamburger-menu.attivo .hamburger-bar:nth-child(1) {
+    transform: translateY(50%) rotate(45deg);
+}
+
+.hamburger-menu.attivo .hamburger-bar:nth-child(2) {
+    opacity: 0; /* nasconde la barretta centrale */
+}
+
+.hamburger-menu.attivo .hamburger-bar:nth-child(3) {
+    transform: translateY(-50%) rotate(-45deg);
+}
+
