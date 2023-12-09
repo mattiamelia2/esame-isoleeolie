@@ -127,8 +127,8 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #238fb0bd;
-    backdrop-filter: blur(10px);
+    background-color: #17677fc7;
+    backdrop-filter: blur(20px);
     z-index: 999; 
     text-align: center;
 }
