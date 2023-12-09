@@ -131,7 +131,6 @@ header {
     backdrop-filter: blur(10px);
     z-index: 999; 
     text-align: center;
-    overflow-y: auto;
 }
 
 
@@ -239,7 +238,7 @@ header {
         padding-top: 10px;
     }
     .hamburger-menu {
-        padding-left: 210px;
+        padding-left: 110px;
         align-items: center;
     }
 }

@@ -148,31 +148,38 @@ document.addEventListener('DOMContentLoaded', function() {
     var startX;
     var scrollLeft;
 
-    sliderIsole5.addEventListener('mousedown', (e) => {
+    function startDragging(e) {
         isDown = true;
         sliderIsole5.classList.add('active');
-        startX = e.pageX - sliderIsole5.offsetLeft;
+        startX = (e.pageX || e.touches[0].pageX) - sliderIsole5.offsetLeft;
         scrollLeft = sliderIsole5.scrollLeft;
-    });
+    }
 
-    sliderIsole5.addEventListener('mouseleave', () => {
+    function stopDragging() {
         isDown = false;
         sliderIsole5.classList.remove('active');
-    });
+    }
 
-    sliderIsole5.addEventListener('mouseup', () => {
-        isDown = false;
-        sliderIsole5.classList.remove('active');
-    });
-
-    sliderIsole5.addEventListener('mousemove', (e) => {
+    function moveSlider(e) {
         if (!isDown) return;
         e.preventDefault();
-        var x = e.pageX - sliderIsole5.offsetLeft;
-        var walk = (x - startX) * 3; // Moltiplica per un fattore per aumentare la sensibilità dello scorrimento
+        var x = (e.pageX || e.touches[0].pageX) - sliderIsole5.offsetLeft;
+        var walk = (x - startX) * 3;
         sliderIsole5.scrollLeft = scrollLeft - walk;
-    });
+    }
+
+    // Eventi Mouse
+    sliderIsole5.addEventListener('mousedown', startDragging);
+    sliderIsole5.addEventListener('mouseleave', stopDragging);
+    sliderIsole5.addEventListener('mouseup', stopDragging);
+    sliderIsole5.addEventListener('mousemove', moveSlider);
+
+    // Eventi Touch
+    sliderIsole5.addEventListener('touchstart', startDragging);
+    sliderIsole5.addEventListener('touchend', stopDragging);
+    sliderIsole5.addEventListener('touchmove', moveSlider);
 });
+
 
 
 
