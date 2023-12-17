@@ -238,8 +238,9 @@ header {
         padding-top: 10px;
     }
     .hamburger-menu {
-        padding-left: 110px;
         align-items: center;
+        position: absolute;
+        right: 1vh;
     }
 }
 
@@ -335,7 +336,7 @@ header {
 
 .hamburger-menu {
     /* Posizionamento e dimensioni del menu a hamburger */
-    position: relative; /* o un'altra posizione, a seconda del layout */
+    position: absolute; /* o un'altra posizione, a seconda del layout */
     width: 40px; /* esempio di dimensione */
     height: 30px; /* esempio di dimensione */
     /* Altri stili... */
