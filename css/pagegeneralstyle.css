@@ -833,9 +833,9 @@
         grid-template-columns: repeat(1, 1fr);
         gap: 20px;
         padding: 10px;
-        padding-left: 30px;
-        padding-right: 30px;
-        padding-bottom: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 80px;
         padding-top: 0px;
       }
       
@@ -848,5 +848,8 @@
         max-width: 100%;
         height: auto;
       }
+      .paragrafospiaggia {
+        padding-bottom: 40px;
+    }
       
 }
