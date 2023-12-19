@@ -534,6 +534,27 @@
         margin: 0px;
     }
 
+    .contenutogenerale1 {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, auto);
+        gap: 20px; /* Spazio tra i div */
+      }
+      
+      .spiaggie {
+        text-align: center; /* Allinea il contenuto al centro */
+        border: 1px solid #ddd; /* Aggiunge un bordo per separare i div */
+        padding: 10px; /* Spazio interno al div */
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Aggiunge ombra ai div */
+      }
+      
+      /* Stili aggiuntivi per le immagini */
+      .spiaggie img {
+        max-width: 100%;
+        height: auto;
+      }
+      
+
     /* RESPONSIVE MOBILE */
 @media only screen and (max-width: 768px) {
     .body {
