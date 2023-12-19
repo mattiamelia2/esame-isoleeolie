@@ -74,7 +74,7 @@ header {
     display: block;
 }
 
-.div2::after, .div3::after, .div5::after {
+.div2::after, .div5::after {
     content: url('/esame-isoleeolie/logo/freccia.png');
     position: relative;
     height: auto;
