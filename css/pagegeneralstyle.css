@@ -539,13 +539,16 @@
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(3, auto);
         gap: 20px; /* Spazio tra i div */
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 50px;
+        padding-bottom: 90px;
       }
       
       .spiaggie {
         text-align: center; /* Allinea il contenuto al centro */
         border: 1px solid #ddd; /* Aggiunge un bordo per separare i div */
         padding: 10px; /* Spazio interno al div */
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Aggiunge ombra ai div */
       }
       
       /* Stili aggiuntivi per le immagini */
